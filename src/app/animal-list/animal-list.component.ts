@@ -26,6 +26,12 @@ export class AnimalListComponent implements OnInit {
      this.animals.splice(index, 1);
    }
 
+   moveToTop(animal)
+   {
+    this.removeAnimal(animal);
+    this.animals.unshift(animal);
+   }
+
   ngOnInit() {
   }
 

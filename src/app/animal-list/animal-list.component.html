@@ -1,3 +1,12 @@
+<label for="">Species</label>
+<input type="">
+<label for="">Name</label>
+<input type="text">
+<label for="">DateOfBirth</label>
+<input type="text">
+<button>Add Animal</button>
+
+
 <table class="table">
   <thead>
     <tr>
@@ -18,7 +27,12 @@
           Remove
         </button>
       </td>
-      
+      <td>
+        <button (click)="moveToTop(animal)">
+          Move to top
+        </button>
+      </td>
+
     </tr>
 
   </tbody>

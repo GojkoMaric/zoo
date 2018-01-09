@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { AnimalListComponent } from './animal-list/animal-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalListComponent
+    AnimalListComponent,
   ],
   imports: [
     BrowserModule
