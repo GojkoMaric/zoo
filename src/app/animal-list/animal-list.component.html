@@ -9,10 +9,10 @@
   </thead>
   <tbody>
     <tr *ngFor = "let animal of animals">
-      <td>{{animal.type}}</td>
-      <td>{{animal.name}}</td>
-      <td *ngIf="!animal.date">Unknown</td>
-      <td *ngIf="animal.date">{{animal.date}}</td>
+      <td>{{animal.Species}}</td>
+      <td>{{animal.Name}}</td>
+      <td *ngIf="!animal.DateOfBirth">Unknown</td>
+      <td *ngIf="animal.DateOfBirth">{{animal.DateOfBirth}}</td>
       <td>
         <button (click)="removeAnimal(animal)">
           Remove
