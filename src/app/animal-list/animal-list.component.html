@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Date of birth</th>
+      <th>Remove Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let animal of animals">
+      <td>{{animal.type}}</td>
+      <td>{{animal.name}}</td>
+      <td>{{animal.date}}</td>
+    </tr>
+
+  </tbody>
+</table>
