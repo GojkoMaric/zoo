@@ -23,7 +23,7 @@ export class AnimalListComponent implements OnInit {
       },
       {
         type: 'monkey',
-        name: 'Marmun',
+        name: 'Majmun',
         date: '05-07-02'
       },
       {
@@ -38,6 +38,12 @@ export class AnimalListComponent implements OnInit {
       }
 
     ];
+   }
+
+   removeAnimal(animal)
+   {
+     let index = this.animals.indexOf(animal);
+     this.animals.splice(index, 1);
    }
 
   ngOnInit() {
