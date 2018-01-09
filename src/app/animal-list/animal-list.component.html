@@ -11,7 +11,9 @@
     <tr *ngFor = "let animal of animals">
       <td>{{animal.type}}</td>
       <td>{{animal.name}}</td>
-      <td>{{animal.date}}</td>
+      <td *ngIf="!animal.date">Unknown</td>
+      <td *ngIf="animal.date">{{animal.date}}</td>
+      
     </tr>
 
   </tbody>

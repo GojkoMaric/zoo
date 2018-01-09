@@ -34,7 +34,7 @@ export class AnimalListComponent implements OnInit {
       {
         type: 'bear',
         name: 'Medved',
-        date: '05-07-09'
+        date: ''
       }
 
     ];
