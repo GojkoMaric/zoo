@@ -1,27 +1,33 @@
-<label for="">Species</label>
-<input type="">
-<label for="">Name</label>
-<input type="text">
-<label for="">DateOfBirth</label>
-<input type="text">
-<button>Add Animal</button>
-
+<form>
+  <label for="spacies">Species</label>
+  <input type="text" name="species" [(ngModel)]='species'><br>
+  <label for="name" >Name</label>
+  <input type="text" name="name" [(ngModel)]='name'><br>
+  <label for="dateOfBirth" >Date Of Birth</label>
+  <input type="text" name="dateOfBirth" [(ngModel)]='dateOfBirth'><br>
+  <label for="sector">Sector</label>
+  <input type="text" [(ngModel)]='sector'><br>
+  <button (click)="addAnimal()">Add Animal</button>
+</form>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Type</th>
+      <th>Speice</th>
       <th>Name</th>
       <th>Date of birth</th>
-      <th>Remove Contact</th>
+      <th>Sector</th>
+      <th>Remove Animal</th>
+      <th>Move to top</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor = "let animal of animals">
-      <td>{{animal.Species}}</td>
-      <td>{{animal.Name}}</td>
-      <td *ngIf="!animal.DateOfBirth">Unknown</td>
-      <td *ngIf="animal.DateOfBirth">{{animal.DateOfBirth}}</td>
+      <td>{{animal.species}}</td>
+      <td>{{animal.name}}</td>
+      <td *ngIf="!animal.dateOfBirth">Unknown</td>
+      <td *ngIf="animal.dateOfBirth">{{animal.dateOfBirth}}</td>
+      <td>{{animal.sector.name}}</td>
       <td>
         <button (click)="removeAnimal(animal)">
           Remove
@@ -35,5 +41,25 @@
 
     </tr>
 
+  </tbody>
+</table>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Surface</th>
+      <th>Manu</th>
+    </tr>
+  </thead>
+  <tbody *ngFor='let sector of sectors'>
+    <tr>
+      <td>{{sector.name}}</td>
+      <td>{{sector.surface}}</td>
+      <td>
+        <button (click)='showAnimals(sector)'>Show List of Animals</button>
+      </td>
+    </tr>
   </tbody>
 </table>

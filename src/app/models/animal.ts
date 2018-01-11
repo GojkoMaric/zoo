@@ -1,12 +1,16 @@
-export class Animal {
-    Species;
-    Name;
-    DateOfBirth;
+import { Sector } from './sector';
 
-    constructor(Species, Name, DateOfBirth='')
+export class Animal {
+    species;
+    name;
+    dateOfBirth;
+    sector: Sector;
+
+    constructor(species, name, dateOfBirth, sector)
     {
-        this.Species=Species;
-        this.Name=Name;
-        this.DateOfBirth=DateOfBirth;
+        this.species=species;
+        this.name=name;
+        this.dateOfBirth=dateOfBirth;
+        this.sector=sector;
     }
 }
